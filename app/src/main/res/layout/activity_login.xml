@@ -19,8 +19,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:orientation="vertical"
-        android:background="@color/colorWhite">
+        android:background="@color/colorWhite"
+        android:orientation="vertical">
 
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
@@ -29,6 +29,7 @@
             android:layout_marginRight="20dp">
 
             <EditText
+                android:id="@+id/email_edittext"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="@string/email" />
@@ -41,40 +42,44 @@
             android:layout_marginRight="20dp">
 
             <EditText
+                android:inputType="textPassword"
+                android:id="@+id/password_edittext"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="@string/password" />
         </com.google.android.material.textfield.TextInputLayout>
 
+        <!--버튼-->
         <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/email_login_button"
+            android:text="@string/signin_email"
             android:layout_width="match_parent"
             android:layout_height="40dp"
             android:layout_marginLeft="20dp"
             android:layout_marginTop="15dp"
             android:layout_marginRight="20dp"
-            android:layout_marginBottom="35dp"
-            android:text="@string/signin_email" />
+            android:layout_marginBottom="35dp" />
 
         <androidx.appcompat.widget.AppCompatButton
-            android:layout_width="match_parent"
-            android:layout_height="40dp"
-            android:layout_marginLeft="20dp"
-            android:layout_marginRight="20dp"
-            android:layout_marginBottom="5dp"
-            android:background="@drawable/btn_signin_facebook"
             android:text="@string/signin_facebook"
-            android:textColor="@color/colorWhite" />
+            android:textColor="@color/colorWhite"
+            android:background="@drawable/btn_signin_facebook"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="5dp" />
 
         <androidx.appcompat.widget.AppCompatButton
+            android:text="@string/signin_google"
+            android:textColor="@color/colorWhite"
+            android:background="@drawable/btn_signin_google"
             android:layout_width="match_parent"
             android:layout_height="40dp"
             android:layout_marginLeft="20dp"
             android:layout_marginTop="15dp"
             android:layout_marginRight="20dp"
-            android:layout_marginBottom="80dp"
-            android:background="@drawable/btn_signin_google"
-            android:text="@string/signin_google"
-            android:textColor="@color/colorWhite" />
+            android:layout_marginBottom="80dp"/>
 
     </LinearLayout>
 
